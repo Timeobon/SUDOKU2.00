@@ -1,0 +1,118 @@
+body{
+    text-align: center;
+    background-color: beige;
+}
+
+#plateau{
+    position: relative;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+#grille{
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 0;
+    border: 4px solid #000;
+}
+
+td{
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#grille td:nth-child(3){
+    border-right: 3px solid;
+}
+
+#grille td:nth-child(6){
+    border-right: 3px solid;
+}
+
+#grille tr:nth-child(3) td{
+    border-bottom: 3px solid;
+}
+
+#grille tr:nth-child(6) td{
+    border-bottom: 3px solid;
+}
+
+#grille input:focus { /*quand la touche est cliquer*/
+    background: #e6f0ff;
+}
+
+
+
+#chiffres{
+    display: flex;
+    justify-content: center;
+    gap: 6px; /*espace entre les bouton*/
+}
+
+#chiffres button{
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#menu{
+    position: absolute;
+    top: 0;
+    right: 100%;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#menu button{
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#grille input[readonly] {
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+#grille input.indice {
+    color: #2a7bd8;          /* les chiffres donnés par un indice sont en bleu */
+}
+
+#grille input.active {
+    background: #e6f0ff;     /* la case choisie reste colorée même quand on clique sur un bouton chiffre */
+}
+
+#indice:disabled {
+    opacity: 0.4;            /* bouton grisé quand il n'y a plus d'indice */
+    cursor: not-allowed;
+}
+
+#chances {
+    position: absolute;      /* ne pousse pas le tableau vers le bas */
+    bottom: 100%;            /* juste au-dessus du tableau */
+    right: 0;                /* collé à droite */
+    margin: 0 0 4px 0;       /* 4px d'espace avec le tableau */
+    font-size: 16px;
+}
+
+#grille input.faux {
+    color: #d62828;          /* chiffre faux en rouge */
+    background: #ffe3e3;     /* fond rouge clair */
+}

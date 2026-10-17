@@ -116,3 +116,49 @@ input{
     color: #d62828;          /* chiffre faux en rouge */
     background: #ffe3e3;     /* fond rouge clair */
 }
+
+@media (max-width: 480px) {
+
+    #plateau {
+        margin: 60px auto 20px;      /* place pour les boutons au-dessus de la grille */
+    }
+
+    /* Cases qui s'adaptent à la largeur de l'écran */
+    td {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    input {
+        font-size: 18px;
+    }
+
+    /* Menu : passe au-dessus de la grille, à gauche */
+    #menu {
+        right: auto;
+        left: 0;
+        top: auto;
+        bottom: 100%;
+        margin: 0 0 4px 0;
+        flex-direction: row;         /* boutons côte à côte */
+    }
+
+    /* Texte des chances : au-dessus de la grille, à droite, aligné avec les boutons */
+    #chances {
+        line-height: 40px;
+        margin-bottom: 4px;
+    }
+
+    /* Boutons chiffres : s'adaptent à la largeur */
+    #chiffres {
+        gap: 4px;
+        padding: 0 2vw;
+    }
+
+    #chiffres button {
+        flex: 1;
+        width: auto;
+        max-width: 45px;
+        height: 44px;
+    }
+}

@@ -188,6 +188,9 @@ function effacer(c) {
 
 // ---------- 7. Sélection d'une case et clavier ----------
 cases.forEach((c) => {
+  // Sur téléphone : empêche le clavier de s'ouvrir (on utilise les boutons 1 à 9)
+  c.setAttribute("inputmode", "none");
+
   // Quand on clique dans une case, on la mémorise
   c.addEventListener("focus", () => {
     if (caseActive) caseActive.classList.remove("active");

@@ -3,6 +3,20 @@ body{
     background-color: beige;
 }
 
+header{
+    position: relative;
+}
+
+#lien-accueil{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
 #plateau{
     position: relative;
     width: fit-content;
